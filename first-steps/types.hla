@@ -9,6 +9,24 @@ static
     IsClear: boolean := true;
     LetterA: char := 'A';
 
+    // mov instruction restrictions
+    // Source -> Destination
+    // Register8 -> Register8
+    // Register8 -> Memory8
+    // Memory8 -> Register8
+    // Constant -> Register8
+    // Constant -> Memory8
+    // Register16 -> Register16
+    // Register16 -> Memory16
+    // Memory16 -> Register16
+    // Constant -> Register16
+    // Constant -> Memory16
+    // Register32 -> Register32
+    // Register32 -> Memory32
+    // Memory32 -> Register32
+    // Constant -> Register32
+    // Constant -> Memory32
+
 begin TYPES;
 
     stdout.put("InitDemo's value is ", InitDemo, nl);

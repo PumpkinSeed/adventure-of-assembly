@@ -1,0 +1,35 @@
+program ADDSUB;
+#include( "stdlib.hhf" );
+
+static
+    i8: int8 := -8;
+    i16: int16 := -16;
+    i32: int32 := -32;
+
+begin ADDSUB;
+
+    stdout.put(nl, "Init values: i8=", i8, ", i16=", i16, ", i32=", i32, nl);
+
+    // Compute the absolute value of the three different variables
+
+    mov(0, al); // Move 0 to AL register
+    sub(i8, al); // Pick up i8 and subtract from the AL which is 0, so 0-(-8)
+    mov(al, i8); // Move AL to the i8 memory address
+
+    mov(0, ax);
+    sub(i16, ax);
+    mov(ax, i16);
+
+    mov(0, eax);
+    sub(i32, eax);
+    mov(eax, i32);
+
+    stdout.put(nl, "After negation: i8=", i8, ", i16=", i16, ", i32=", i32, nl);
+
+    add(32323200, i32); // add the number to the i32's value
+
+    stdout.put(nl, "After add: i32=", i32, nl)
+
+    // NOTE: sub and add do NOT use memory-to-memory operations
+    
+end ADDSUB;
