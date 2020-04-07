@@ -1,0 +1,19 @@
+program TYPES;
+#include( "stdlib.hhf" );
+
+static
+    InitDemo: int32 := 5;
+    NotInit: int32;
+    BoolVar: boolean;
+    HasClass: boolean := false;
+    IsClear: boolean := true;
+    LetterA: char := 'A';
+
+begin TYPES;
+
+    stdout.put("InitDemo's value is ", InitDemo, nl);
+    stdout.put("Enter an integer value: ");
+    stdin.get(NotInit);
+    stdout.put("You entered: ", NotInit, nl);
+
+end TYPES;
