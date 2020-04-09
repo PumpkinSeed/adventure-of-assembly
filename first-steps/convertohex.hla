@@ -1,0 +1,19 @@
+program CONVERTTOHEX;
+
+#include("stdlib.hhf")
+
+static
+    value: int32;
+
+begin CONVERTTOHEX;
+    stdout.put("Input a decimal value:");
+    stdin.get(value);
+    mov(value,eax);
+    stdout.put("The value ", value, " converted to hex is $", eax, nl);
+
+    stdout.put("Input a decimal value:");
+    stdin.get(ebx);
+    mov(ebx, value);
+    stdout.put("The value $", ebx, " converted to decimal is ", value, nl);
+
+end CONVERTTOHEX;

@@ -14,7 +14,7 @@ begin CONTROLFLOW;
         stdout.put("Pointer is invlaid", nl);
     endif;
 
-    // MOVE STATEMENT
+    // WHILE STATEMENT
     mov(0, i);
     while(i<10) do
         stdout.put("i=", i, nl);
