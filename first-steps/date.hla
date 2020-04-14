@@ -1,0 +1,54 @@
+program dateTest;
+#include("stdlib.hhf")
+
+static
+    day: uns8;
+    month: uns8;
+    year: uns8;
+    packedDate: word;
+
+begin dateTest;
+
+    stdout.put("Enter the current month, day and year: ");
+    stdin.get(month, day, year);
+
+    mov(0, ax);
+    mov(ax, packedDate);
+    if (month > 12) then
+        stdout.put("Month value is too large, nl");
+    elseif(month = 0) then
+        stdout.put( "Month value must be in the range 1..12", nl );
+    elseif( day > 31 ) then
+        stdout.put( "Day value is too large", nl );
+    elseif( day = 0 ) then
+        stdout.put( "Day value must be in the range 1..31", nl );
+    elseif( year > 99 ) then
+        stdout.put( "Year value must be in the range 0..99", nl );
+    else
+        // Pack the date
+        mov(month, al);
+        shl(5, ax);
+        or(day, al);
+        shl(7, ax);
+        or(year, al);
+        mov(ax, packedDate);
+    endif;
+
+    stdout.put("Packed data = $", packedDate, nl);
+
+    // Unpack the date
+    mov(packedDate, ax);
+    and($7f, al);
+    mov(al, year);
+    mov(packedDate, ax);
+    shr(7, ax); // right shift
+    and(%1_1111, al);
+    mov(al, day);
+    mov(packedDate, ax);
+    rol(4, ax); // left rotate
+    and(%1111, al);
+    mov(al, month);
+
+    stdout.put( "The date is ", month, "/", day, "/", year, nl );
+
+end dateTest;
