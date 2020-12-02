@@ -6,3 +6,6 @@ registers:
 
 read:
 	nasm -f elf64 read.asm && ld -o read read.o
+
+addressing:
+	nasm -f elf64 addressing.asm && ld -o addressing addressing.o
