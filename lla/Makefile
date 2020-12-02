@@ -3,3 +3,6 @@ helloworld:
 
 registers:
 	nasm -f elf64 registers.asm && ld -o registers registers.o
+
+read:
+	nasm -f elf64 read.asm && ld -o read read.o
