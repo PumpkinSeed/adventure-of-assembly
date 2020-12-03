@@ -9,3 +9,6 @@ read:
 
 addressing:
 	nasm -f elf64 addressing.asm && ld -o addressing addressing.o
+
+const_equ:
+	nasm -f elf64 const_equ.asm && ld -o const_equ const_equ.o
