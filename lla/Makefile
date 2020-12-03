@@ -12,3 +12,6 @@ addressing:
 
 const_equ:
 	nasm -f elf64 const_equ.asm && ld -o const_equ const_equ.o
+
+add:
+	nasm -f elf64 add.asm && ld -o add add.o
