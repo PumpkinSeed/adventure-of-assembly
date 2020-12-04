@@ -15,3 +15,6 @@ const_equ:
 
 add:
 	nasm -f elf64 add.asm && ld -o add add.o
+
+mul:
+	nasm -f elf64 mul.asm && ld -o mul mul.o
