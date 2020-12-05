@@ -18,3 +18,6 @@ add:
 
 mul:
 	nasm -f elf64 mul.asm && ld -o mul mul.o
+
+and:
+	nasm -f elf64 and.asm && ld -o and and.o
