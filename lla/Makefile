@@ -21,3 +21,6 @@ mul:
 
 and:
 	nasm -f elf64 and.asm && ld -o and and.o
+
+or:
+	nasm -f elf64 or.asm && ld -o or or.o
