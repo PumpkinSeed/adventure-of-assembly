@@ -30,3 +30,9 @@ conditions:
 
 loops:
 	nasm -f elf64 loops.asm && ld -o loops loops.o
+
+numbers:
+	nasm -f elf numbers.asm && ld -m elf_i386 -o numbers numbers.o
+
+arrays:
+	nasm -f elf64 arrays.asm && ld -o arrays arrays.o
