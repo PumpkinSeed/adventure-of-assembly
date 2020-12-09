@@ -39,3 +39,6 @@ arrays:
 
 procedures:
 	nasm -f elf64 procedures.asm && ld -o procedures procedures.o
+
+stack:
+	nasm -f elf64 stack.asm & ld -s -o stack stack.o
