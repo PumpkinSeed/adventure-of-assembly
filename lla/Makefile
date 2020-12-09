@@ -27,3 +27,6 @@ or:
 
 conditions:
 	nasm -f elf64 conditions.asm && ld -o conditions conditions.o
+
+loops:
+	nasm -f elf64 loops.asm && ld -o loops loops.o
