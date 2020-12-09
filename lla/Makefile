@@ -48,3 +48,6 @@ fact:
 
 macros:
 	nasm -f elf64 macros.asm && ld -o macros macros.o
+
+file:
+	nasm -f elf64 file.asm && ld -o file file.o
