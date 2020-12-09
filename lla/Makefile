@@ -36,3 +36,6 @@ numbers:
 
 arrays:
 	nasm -f elf64 arrays.asm && ld -o arrays arrays.o
+
+procedures:
+	nasm -f elf64 procedures.asm && ld -o procedures procedures.o
