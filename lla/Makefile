@@ -45,3 +45,6 @@ stack:
 
 fact:
 	nasm -f elf64 fact.asm && ld -o fact fact.o
+
+macros:
+	nasm -f elf64 macros.asm && ld -o macros macros.o
