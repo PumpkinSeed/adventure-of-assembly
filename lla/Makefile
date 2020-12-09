@@ -24,3 +24,6 @@ and:
 
 or:
 	nasm -f elf64 or.asm && ld -o or or.o
+
+conditions:
+	nasm -f elf64 conditions.asm && ld -o conditions conditions.o
