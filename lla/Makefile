@@ -51,3 +51,6 @@ macros:
 
 file:
 	nasm -f elf64 file.asm && ld -o file file.o
+
+memory:
+	nasm -f elf64 memory.asm && ld -o memory memory.o
