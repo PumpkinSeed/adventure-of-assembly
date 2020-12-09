@@ -41,4 +41,7 @@ procedures:
 	nasm -f elf64 procedures.asm && ld -o procedures procedures.o
 
 stack:
-	nasm -f elf64 stack.asm & ld -s -o stack stack.o
+	nasm -f elf64 stack.asm && ld -o stack stack.o
+
+fact:
+	nasm -f elf64 fact.asm && ld -o fact fact.o
